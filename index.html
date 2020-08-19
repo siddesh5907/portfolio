@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Siddesh Kalangutkar</title>
+  
+	<!--stylesheet-->
+	<link rel="stylesheet" href="style.css" type="text/css">
+ 
+	<!--Icons--> 
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	
+	<!--Hiding the scrollbar(chrome) & using custom scrollbar-->
+	<div id="progressbar"></div>
+	<div id="scrollPath"></div>
+
+	<!--first background-->
+  	<div class="parallax1">
+    <div class="heading">
+      Hello, I'm Siddesh.
+    </div>
+  	</div>
+	<section>
+    	<h1>I am Siddesh Kalangutkar</h1>
+    	<h2>A Web Designer and Software Developer </h3>
+    	<div >
+      		<p>I have done Bechelor's in Engineering in Information Technology. I have great knowledge in Programming and Web Development. My objective is to seek a challenging position in Computer Engineering environment where I could add my knowledge and skills for the better productivity of the organization.</p>
+    	</div> 
+	</section>
+
+	<!--second background-->  
+	<div class="parallax2">
+    <div class="heading-sm">
+    	Knowledge.
+    </div>
+  	</div>
+  	<section class="dark">
+    <h2>Technical Knowledge and Interests</h2>
+	
+	<!--4 Filp cards for knowledge-->
+	<div class="container">
+    	<ul>
+    		<li class="flip-card">
+	    		<div class="flip-card-inner">
+	   				<div class="flip-card-front">
+	   					<img src="img/programming.png" style="width:100%;height:100%;border-radius:25px;"/>
+	      				<h1 style="position:absolute;top:30%;left:2%;">Programming Languages</h1>
+	   			 	</div>
+	   			 	<div class="flip-card-back">
+	   			 		<h1>C</h1>
+	      				<h1>C++</h1>
+	      				<h1>Java</h1>
+	    			</div>
+	  			</div>
+  			</li>
+
+    		<li class="flip-card">
+	    		<div class="flip-card-inner">
+	   				<div class="flip-card-front">
+	   					<img src="img/webIcon.png" style="width:100%;height:100%;border-radius:25px;"/>
+	      				<h1 style="position:absolute;top:30%;left:2%;">Web Development</h1>
+	   			 	</div>
+	   			 	<div class="flip-card-back">
+	   			 		<h1>HTML</h1>
+	      				<h1>CSS</h1>
+	      				<h1>JAVASCRIPT</h1>
+	      				<h1>PHP</h1>
+	    			</div>
+	  			</div>
+  			</li>
+ 
+    		<li class="flip-card">
+	    		<div class="flip-card-inner">
+	   				<div class="flip-card-front">
+	   					<img src="img/appIcon.jpg" style="width:100%;height:100%;border-radius:25px;"/>
+	      				<h1 style="position:absolute;top:30%;left:2%;">Mobile App Development</h1>
+	   			 	</div>
+	   			 	<div class="flip-card-back">
+	   			 		<h1>Reac Native Framework</h1>
+	    			</div>
+	  			</div>
+  			</li>
+
+    		<li class="flip-card">
+	    		<div class="flip-card-inner">
+	   				<div class="flip-card-front">
+	   					<img src="img/dbIcon.jpg" style="width:100%;height:100%;border-radius:25px;"/>
+	      				<h1 style="position:absolute;top:30%;left:30%;">Database</h1>
+	   			 	</div>
+					<div class="flip-card-back">
+						<h1>MySql</h1>
+						<h1>Google's Firebase</h1>
+						<h1>Oracle</h1>
+						<h1>PHP</h1>
+					</div>
+	  			</div>
+  			</li>
+    	</ul>
+    </div>
+	</section>
+	
+	<!--Third background-->
+	<div class="parallax3">
+		<div class="heading-sm">
+    		Projects.
+   		</div>
+  	</div>
+	<div class="dark">
+		<h1>Service Call Mangement System</h1>
+		<h3>This systems provide seem less facility for customers to book an appointment for servicing/repairing of electronic products owned by them. The nearest Technician available would get selected and assigned the servicing/repairing work.</h3>
+		<div class="projectContainer">
+			<div class="projectContent">
+				<p>Web UI for Admin of the system to maintain all the transactions and Datasebase of Clients and Technicians under them. Web development is done using HTML/CSS, JavaScript, Google’s Firebase Database.</p>
+			</div>
+			<div class="projectContent">
+				<p>Mobile App for Clients to register their product and book an appointment for its repairing and for Technicians to receive the appointment details and to locate the client. Mobile App development is done using React Native framework.</p>
+			</div>
+		</div>
+  	</div>
+
+	<!--fourth backgroung-->
+	<div class="parallax4">
+		<div class="heading-sm">
+    		About.
+    	</div>
+  	</div>
+	<section>
+		<h2>I Also love</h3>
+		<div class="hobby">
+			<i class="fa fa-paint-brush fa-5x"></i>
+			<i class="fa fa-music fa-5x"></i>
+			<i class="fa fa-camera fa-5x"></i>
+		</div>
+		<br><br>
+		<h2>Contact Me</h2>
+		<div class="hobby">
+			<a href="mailto:sid595907@.gmail.com"><i class="fa fa-envelope fa-5x"></i></a>
+			<a href="https://www.facebook.com/siddesh.kalangutkar"><i class="fa fa-facebook fa-5x"></i></a>
+			<a href="https://www.instagram.com/siddesh_kalangutkar/"><i class="fa fa-instagram fa-5x"></i></a>
+		</div>
+		<p><br><br>This site is completely designed and developed by Siddesh Kalangutkar</p>
+		<p>SIDDESH KALANGUTKAR PORTFOLIO</p>
+  	</section>
+  
+  
+	<!--Script for custom scrollBar-->
+			<script type="text/javaScript">
+				let progress = document.getElementById('progressbar');
+				let totalHeight = document.body.scrollHeight - window.innerHeight;
+				
+				window.onscroll = function(){
+					let progressHeight = (window.pageYOffset /totalHeight) * 100;
+					progress.style.height = progressHeight + "%";
+				}
+			</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+  line-height: 180%;
+  color: #666;
+  text-align: center;
+}
+
+/* Backgound images */
+.parallax1 {
+  background: url(img/sidcover.jpg);
+  min-height: 100%;
+}
+.parallax2 {
+  background: url(img/knowledgebg2.jpg);
+  min-height: 60%;
+}
+
+.parallax3 {
+  background: url(img/projectbg.png);
+  min-height: 60%;
+}
+.parallax4 {
+  background: url(img/about.jpg);
+  min-height: 60%;
+}
+.parallax1, .parallax2, .parallax3, .parallax4 {
+  position: relative;
+  opacity: .75;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Heading on first background with animation */
+.heading {
+  position: absolute;
+  color: #fff;
+  font-size: 550%;
+  top: 30%;
+  width: 100%;
+  animation: textGlow 1.5s linear alternate infinite;
+  letter-spacing: 8px;
+  
+}
+@keyframes textGlow{
+	0%
+	{
+		text-shadow: 0 0 10px #000;
+	}
+	50%
+	{
+		text-shadow: 0 0 30px #000;
+	}
+	100%
+	{
+		text-shadow: 0 0 50px #000;
+	}
+	
+}
+
+/* Heading on all background images */
+.heading-sm {
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  color: #fff;
+  font-size: 400%;
+  
+  letter-spacing: 5px;
+  text-shadow: 0 0 30px #000;
+}
+
+/*flip cards for knowledge*/
+.container{
+    margin: auto;
+    overflow: hidden;
+}
+
+.container ul{
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+    flex-direction:row;
+}
+
+.container ul li{
+    list-style: none;
+    width:20%;
+    height:250px;
+    margin: 10px;
+    box-sizing: border-box;
+    cursor:pointer;
+    border-radius:24px;
+}
+
+@media screen and (max-width:1200px)
+{
+	.container ul li
+	{
+		width:40%;
+	}
+}
+
+@media screen and (max-width:1200px)
+{
+	.container ul li
+	{
+		width:60%;
+	}
+}
+
+/* The flip card container */
+.flip-card {
+  background-color: transparent;
+  perspective: 1000px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+	letter-spacing:2px;
+	border-radius:25px;
+	text-align:center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: teal;
+  color: white;
+  text-shadow: 0 0 10px #000;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color:  #f2f2f2;;
+  color: teal;
+  transform: rotateY(180deg);
+}
+
+/* Backgound 3 for project with on hover scale manipulation */
+.two-col {
+  float: left;
+  width: 42%;
+  padding: 0 4%;
+  text-align: left;
+}
+
+.projectContainer{
+  transition: 0.5s;
+}
+
+.projectContainer:hover .projectContent{
+  filter: blur(5px);
+  transform: scale(.7);
+
+}
+.projectContainer .projectContent:hover{
+  background:whitesmoke;
+  color:black;
+  filter: blur(0px);
+  transform: scale(1);
+}
+
+.projectContent {
+  float: left;
+  width: 42%;
+  padding: 0 4%;
+  text-align: left;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+section {
+  overflow: auto;
+  padding: 50px 80px;
+}
+.dark {
+  overflow: auto;
+  padding: 50px 80px;
+  background-color: #323232;
+  color: #f2f2f2;
+}
+
+/* custom scroll bar works best on chrome*/
+::-webkit-scrollbar{
+	width:0;
+}
+
+#scrollPath{
+	position: fixed;
+	top:0;
+	right:0;
+	width:10px;
+	height: 100%;
+	background:  rgba(255,255,255,0.5);
+}
+
+#progressbar{
+	position: fixed;
+	top:0;
+	right:0;
+	width:10px;
+	
+	background: linear-gradient(to top,#008aff,#00ffe7);
+	animation: animate 5s linear infinite;
+}
+
+@keyframes animate{
+	0%,100%
+	{
+		filter: hue-rotate(0deg);
+	}
+	50%
+	{
+		filter: hue-rotate(360deg);
+	}
+}
+
+#progressbar:before {
+	content: '';
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background: linear-gradient(to top,#008aff,#00ffe7);
+	filter: blur(10px);
+}
+#progressbar:after {
+	content: '';
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background: linear-gradient(to top,#008aff,#00ffe7);
+	filter: blur(30px);
+}
+/* Custom scrollbar end */
+
+/* for responsive texts */
+@media (max-width: 900px) {
+  .heading {
+    font-size: 250%;
+  }
+  .heading-sm {
+    font-size: 180%;
+  }
+  .two-col {
+    width: 70%;
+    padding: 0;
+    text-align: center;
+  }
+}
+
+/* 4th background for ABOUT */
+.hobby{
+  display:flex;
+  justify-content: space-around;
+}
+.hobby i{
+  transition: 0.5s;
+}
+
+.hobby a {
+  text-decoration: none;
+  color:#323232;
+}
+.hobby i:hover{
+  transform: scale(1.2);
+  color:teal;
+}
