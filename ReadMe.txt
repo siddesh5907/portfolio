@@ -4,6 +4,6 @@ This site is fully responsive.
 
 It consists of 
 -parallex background.
--custmon scroll bar(works best on Chrome)
--flip cards
--On hover scale manipulation
+-custom scroll bar(works best on Chrome)
+-flip cards(knowledge section)
+-On hover scale manipulation(project section)
